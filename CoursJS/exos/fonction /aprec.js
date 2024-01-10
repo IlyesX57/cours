@@ -11,27 +11,28 @@ function aprec() {
 let result;
 if (Hideux < 7){
     result = 'Hideux'
-return result}
+}
 
 if (Moche < 10){
         result = 'Moche'
     
-return result
+
     }
 
 if (Nice < 15){
             result = 'Nice'
-return result
+
         }
 
- if (GG >= 15){
+ if (GG >= 15||20){
             result = 'GG'
-return result
+
         }
             
-
-
-
+else{
+    result = 'BUG';
+}
+return result
 
 }
 
