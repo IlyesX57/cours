@@ -7,6 +7,53 @@
 //     renvoie GG si la note entre 15 et 20 inclus
 //     renvoie BUG si la note n'est pas correcte
 
+function aprec() {
+let result;
+if (Hideux < 7){
+    result = 'Hideux'
+return result}
+
+if (Moche < 10){
+        result = 'Moche'
+    
+return result
+    }
+
+if (Nice < 15){
+            result = 'Nice'
+return result
+        }
+
+ if (GG >= 15){
+            result = 'GG'
+return result
+        }
+            
+
+
+
+
+}
+
+
+
+
+
+    
+
+    
+        
+
+        
+        
+
+        
+           
+            
+
+
+
+
 
 
 
