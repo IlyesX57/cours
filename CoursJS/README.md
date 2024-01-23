@@ -731,6 +731,32 @@ function MaFonctionInterdite(transmetteur, receveur, message, date){
 }
 var Kévin = new MaFonctionInterdite("Didi", 'Kévin', "Tu viens au PMU ?", '15:00:00-22-01-2024')
 console.log(Kévin.getTransmetteur()) // Me retourne Didi
-Kévin.LeMessage = "Tu viens à l'apero ?"
+Kévin.LeMessage = "Tu viens à l’apéro ?"
 ```
 
+### -B Système d'héritage
+Le système d'héritage sert à récupérer des variables, des fonctions et tout ce qu'il s'y trouve dans 
+un autre objet
+Exemple : 
+```js
+function Personne(prenom, nom, age, adresse, tel, email, sexe, caractere) {
+    this.Prenom = prenom;
+    this.Nom = nom;
+    this.Age = age;
+    this.Adresse = adresse;
+    this.Tel = tel;
+    this.Email = email;
+    this.Sexe = sexe;
+    this.Caractere = caractere;
+}
+function Etudiant(fiche, note) {
+
+    Personne.call(this, fiche.Prenom, fiche.Nom
+    , fiche.Age, fiche.Adresse, fiche.Tel
+    , fiche.Email, fiche.Sexe, fiche.Caractere);
+
+    this.LaFicheDeLétudiant = fiche;
+    this.LaNoteEst = note;
+
+}
+```
