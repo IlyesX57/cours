@@ -88,10 +88,70 @@ son prix
 Tout les attributs de l'objet Véhicule sont supposée être privés donc
 il faudra avoir des fonction get
 Ensuite les objets Voiture et Camion son hérité de Véhicule et 
-possède deux méthode démarrer et accélérer il affiche soit un message 
+possède deux (fonction) démarrer et accélérer il affiche soit un message 
 Démarrer ou Accélère
 
 Créer les objets Véhicule, Voiture et Camion
 
-
 */
+
+function Véhicule(matricule, annee, modèle, prix) {
+    this.getMatricule = function() {
+        return matricule;
+    }
+    this.getAnnee = function() {
+        return annee;
+    }
+    this.getModele = function() {
+        return modèle;
+    }
+    this.getPrix = function() {
+        return prix;
+    }
+    this.getAll = function() {
+        return [matricule, annee, modèle, prix]
+    }
+}
+
+function Voiture(matricule, annee, modèle, prix) {
+    Véhicule.call(this, matricule, annee, modèle, prix)
+
+    this.demarrer = function() {
+        return 'La voiture à démarrer'
+    }
+    this.accellerer = function() {
+        return 'La voiture a accéléré'
+    }
+}
+
+function Camion(matricule, annee, modèle, prix) {
+    Véhicule.call(this, matricule, annee, modèle, prix)
+
+    this.demarrer = function() {
+        return 'Le camion à démarrer'
+    }
+    this.accellerer = function() {
+        return 'Le camion a accéléré'
+    }
+}
+
+let Fiat = new Voiture('AB-1012', 2000, 'Panda', 1000)
+let Scania = new Camion('BC-7894', 2010, 'O', 100000)
+console.log(Fiat)
+console.log(Fiat.getAnnee(), Fiat.getPrix())
+console.log(Fiat.demarrer())
+console.log(Scania.demarrer())
+
+let EleveA = {
+    Classe: "Terminale A", 
+    Matiere: {
+        math: 10,
+        science: 15
+    }
+}
+let EleveB = {
+    Classe: "Terminale B"
+}
+
+console.log(EleveA.Matiere.math)
+console.log(EleveB.Matiere.math)
